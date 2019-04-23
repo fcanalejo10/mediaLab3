@@ -263,23 +263,3 @@ function animate()
 </body>
 </html>
 
-
-function render()
-{
-	renderer.render( scene, camera );
-}
-
-
-function animate()
-{
-	requestAnimationFrame(animate);
-	deltaTime = clock.getDelta();
-	totalTime += deltaTime;
-	update();
-	render();
-}
-
-</script>
-
-</body>
-</html>
