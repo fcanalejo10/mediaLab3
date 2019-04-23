@@ -113,10 +113,13 @@ function initialize()
 	})
 
 	let geometry1	= new THREE.CubeGeometry(1,1,1);
+	
+	let loader = new THREE.TextureLoader();
+	let texture = loader.load( 'images/basketball.jpg', render );
+	
 	let material1	= new THREE.MeshNormalMaterial({
-		transparent: true,
+		map: texture,
 		opacity: 0.5,
-		side: THREE.DoubleSide
 	}); 
 	
 	mesh1 = new THREE.Mesh( geometry1, material1 );
