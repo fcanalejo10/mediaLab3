@@ -112,12 +112,12 @@ function initialize()
 		type: 'pattern', patternUrl: "data/hiro.patt",
 	})
 
-	let geometry1	= new THREE.CubeGeometry(1,1,1);
+	let geometry1	= new THREE.SphereGeometry(1,1,1);
 	
 	let loader = new THREE.TextureLoader();
 	let texture = loader.load( 'images/basketball.jpg', render );
 	
-	let material1	= new THREE.MeshNormalMaterial({
+	let material1	= new THREE.MeshLambertMaterial({
 		map: texture,
 		opacity: 0.5,
 	}); 
@@ -133,7 +133,7 @@ function update()
 {
 	if ( markerRoot1.visible ){
 		mesh1.rotation.y += 0.01;
-		mesh1.position.z += 0.001;
+		mesh1.position.x += 0.005;
 	}
 	// update artoolkit on every frame
 	if ( arToolkitSource.ready !== false )
