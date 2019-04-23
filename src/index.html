@@ -117,10 +117,7 @@ function initialize()
 	let loader = new THREE.TextureLoader();
 	let texture = loader.load( 'images/basketball.jpg', render );
 	
-	let material1	= new THREE.MeshLambertMaterial({
-		map: texture,
-		opacity: 0.5,
-	}); 
+	let material1	= new THREE.MeshLambertMaterial({ map: texture, opacity: 0.5 }); 
 	
 	mesh1 = new THREE.Mesh( geometry1, material1 );
 	mesh1.position.y = 0.5;
