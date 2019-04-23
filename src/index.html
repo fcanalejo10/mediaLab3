@@ -112,9 +112,12 @@ function initialize()
 		type: 'pattern', patternUrl: "data/hiro.patt",
 	})
 
-	let geometry1	= new THREE.SphereGeometry(0.51,32,32);
-	let material1	= new THREE.MeshPhongMaterial({ opacity: 0.5 }); 
-	material1.map    = THREE.ImageUtils.loadTexture('earth-sphere.jpg')
+	let geometry1	= new THREE.SphereGeometry(0.2,32,32);
+	let loader = new THREE.TextureLoader();
+	let texture = loader.load( 'earth-sphere.jpg', render );
+	let material1	= new THREE.MeshNormalMaterial({ map: texture, opacity: 0.5 }); 
+
+	
 	mesh1 = new THREE.Mesh( geometry1, material1 );
 	mesh1.position.y = 0.5;
 	mesh1.position.x = 5;
