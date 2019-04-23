@@ -131,6 +131,18 @@ function initialize()
 
 function update()
 {
+	if ( markerRoot1.visible ){
+		mesh1.rotation.y += 0.01;
+		boolean top = false;
+		if(!top){
+			mesh1.position.z += 0.01
+			if(mesh1.position.z == 0.5) top=true;
+		}
+		if(top){
+			mesh1.position.z -= 0.01
+			if(mesh1.position.z == 0) top=false;
+		}
+	}
 	// update artoolkit on every frame
 	if ( arToolkitSource.ready !== false )
 		arToolkitContext.update( arToolkitSource.domElement );
