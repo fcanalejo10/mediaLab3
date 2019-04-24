@@ -112,23 +112,18 @@ function initialize()
 		type: 'pattern', patternUrl: "data/hiro.patt",
 	})
 
-	/*let geometry1	= new THREE.SphereGeometry(0.2,32,32);
+	let geometry1	= new THREE.SphereGeometry(0.2,32,32);
 	let loader = new THREE.TextureLoader();
 	let texture = loader.load( 'earth-sphere.jpg', render );
 	let material1	= new THREE.MeshNormalMaterial({ map: texture, opacity: 0.5 }); 
-
 	
+	material1.map = THREE.ImageUtils.loadTexture('images/basketball.png')
+
 	mesh1 = new THREE.Mesh( geometry1, material1 );
 	mesh1.position.y = 0.5;
 	mesh1.position.x = 2;
 	
-	markerRoot1.add( mesh1 );*/
-	
-	let geometry   = new THREE.SphereGeometry(0.5, 32, 32)
-	let material  = new THREE.MeshPhongMaterial()
-	let mesh1 = new THREE.Mesh(geometry, material)
-	markerRoot1.add(mesh1)
-
+	markerRoot1.add( mesh1 );
 }
 
 
