@@ -115,7 +115,7 @@ function initialize()
 	let geometry1	= new THREE.SphereGeometry(0.2,32,32);
 	let loader = new THREE.TextureLoader();
 	let texture = loader.load( 'earth-sphere.jpg', render );
-	let material1	= new THREE.MeshNormalMaterial({ opacity: 0.5 }); 
+	let material1	= new THREE.MeshNormalMaterial({ color: #0000FF, opacity: 0.5 }); 
 	
 	material1.map = THREE.ImageUtils.loadTexture('images/basketball.png')
 
