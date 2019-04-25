@@ -107,13 +107,8 @@ function initialize()
 
 	// build markerControls
 	markerRoot1 = new THREE.Group();
-	markerRoot2 = new THREE.Group();
 	scene.add(markerRoot1);
 	let markerControls1 = new THREEx.ArMarkerControls(arToolkitContext, markerRoot1, {
-		type: 'pattern', patternUrl: "data/hiro.patt",
-	})
-	scene.add(markerRoot2);
-	let markerControls2 = new THREEx.ArMarkerControls(arToolkitContext, markerRoot2, {
 		type: 'pattern', patternUrl: "data/hiro.patt",
 	})
 
@@ -131,7 +126,7 @@ function initialize()
 	material2.map = THREE.ImageUtils.loadTexture('images/moon-sphere.jpg')
 	mesh2 = new THREE.Mesh( geometry2, material2 );
 	mesh2.position.y = 0.5;
-	mesh2.position.x = 2;
+	mesh2.position.x = 3;
 	markerRoot1.add( mesh2 );
 }
 
@@ -139,7 +134,8 @@ function initialize()
 function update()
 {
 	if ( markerRoot1.visible ){
-		scene.rotation.y += 0.01;
+		markerRoot1.rotation.y += 0.01;
+		mesh1.rotation.y += 0.01;
 	}
 	// update artoolkit on every frame
 	if ( arToolkitSource.ready !== false )
