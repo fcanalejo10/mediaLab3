@@ -116,7 +116,7 @@ function initialize()
 	let loader = new THREE.TextureLoader();
 	let texture = loader.load( 'earth-sphere.jpg', render );
 	let material1	= new THREE.MeshStandardMaterial({ opacity: 0.5 });
-	material1.map('texture');
+	material1.map = THREE.ImageUtils.loadTexture('images/earth-sphere.jpg')
 
 	mesh1 = new THREE.Mesh( geometry1, material1 );
 	mesh1.position.y = 0.5;
