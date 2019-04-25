@@ -112,17 +112,21 @@ function initialize()
 		type: 'pattern', patternUrl: "data/hiro.patt",
 	})
 
-	let geometry1	= new THREE.SphereGeometry(0.2,32,32);
-	let loader = new THREE.TextureLoader();
-	let texture = loader.load( 'earth-sphere.jpg', render );
+	//earth
+	let geometry1	= new THREE.SphereGeometry(1,64,64);
 	let material1	= new THREE.MeshStandardMaterial({ opacity: 0.5 });
 	material1.map = THREE.ImageUtils.loadTexture('images/earth-sphere.jpg')
-
 	mesh1 = new THREE.Mesh( geometry1, material1 );
-	mesh1.position.y = 0.5;
-	mesh1.position.x = 2;
+	mesh1.position.y = 1;
 	
-	markerRoot1.add( mesh1 );
+	//moon
+	let geometry2	= new THREE.SphereGeometry(0.2,32,32);
+	let material2	= new THREE.MeshStandardMaterial({ opacity: 0.5 });
+	material2.map = THREE.ImageUtils.loadTexture('images/moon-sphere.jpg')
+	mesh2 = new THREE.Mesh( geometry2, material2 );
+	mesh2.position.y = 1;
+	mesh2.position.x = 2;
+	markerRoot1.add( mesh2 );
 }
 
 
