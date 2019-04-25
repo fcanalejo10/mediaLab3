@@ -123,6 +123,7 @@ function initialize()
 	material1.map = THREE.ImageUtils.loadTexture('images/earth-sphere.jpg')
 	mesh1 = new THREE.Mesh( geometry1, material1 );
 	mesh1.position.y = 0.5;
+	markerRoot1.add( mesh1 );
 	
 	//moon
 	let geometry2	= new THREE.SphereGeometry(0.2,32,32);
