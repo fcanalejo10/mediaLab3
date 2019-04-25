@@ -1,3 +1,5 @@
+ working with Firefox v.66.0.3 amd Chrome v.73.0.3683.103
+
 # mediaLab3
 
 This lab aims to build your first Augmented Reality (AR) app.
